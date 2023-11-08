@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun Home(
     onButton1: () -> Unit,
+    onButton2: () -> Unit,
 ) {
 
     Column(
@@ -22,10 +23,13 @@ fun Home(
     ){
         Text(
             text = "CashoFlow UA",
-            style = MaterialTheme.typography.headlineMedium
+            style = MaterialTheme.typography.headlineSmall
         )
         Button(onClick = { onButton1() }) {
             Text(text = "Let's go!")
+        }
+        Button(onClick = { onButton2() }) {
+            Text(text = "Calculator")
         }
     }
 }
