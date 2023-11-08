@@ -15,7 +15,8 @@ data class HomeUiState(
 //    val bikeTasksList: List<BikeTaskItem> = emptyList(),
 //    val selectedBikeTaskId: Int? = null,
 //    val selectedStatus: String = "",
-    val page: Int? = null,
+    val salary: Int? = null,
+    val totalPassive: Int? = null,
 ) {
 
 }
