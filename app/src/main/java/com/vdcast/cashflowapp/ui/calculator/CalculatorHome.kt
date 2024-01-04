@@ -120,12 +120,16 @@ fun CalculatorHome(
 
                 CalculatorRoutes.MainHelp.route -> MainHelp(
                     appViewModel = appViewModel,
-                    onBack = { currentScreen.value = CalculatorBottomItem.Main.route }
+                    onClose = { currentScreen.value = CalculatorBottomItem.Main.route }
                 )
 
                 CalculatorRoutes.MainNewGame.route -> MainNewGame(
                     appViewModel = appViewModel,
-                    onBack = { currentScreen.value = CalculatorBottomItem.Main.route }
+                    onClose = { currentScreen.value = CalculatorBottomItem.Main.route },
+                    onStart = {
+//                        appViewModel.onStart()
+                        currentScreen.value = CalculatorBottomItem.Main.route
+                    }
                 )
                 // CalculatorBottomItem.Main.route ->
                 else -> Main(
